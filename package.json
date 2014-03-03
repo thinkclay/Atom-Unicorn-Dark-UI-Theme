@@ -1,0 +1,11 @@
+{
+  "name": "unicorn-ui",
+  "theme": "ui",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "A retro ui theme with some vibrant colors",
+  "repository": "https://github.com/unicorn/atom-unicorn-ui",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
