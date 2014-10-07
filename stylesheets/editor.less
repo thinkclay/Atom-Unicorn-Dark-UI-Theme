@@ -22,21 +22,24 @@
 // Updates to spacing
 // Making line numbers less in-your-face
 .panes .pane.active .editor.react.editor-colors {
-  // Vertical Column Guide
-  .wrap-guide {
-    background-color: #2C220C;
+  .scroll-view {
+    padding: .5em;
+    
+    // Vertical Column Guide
+    .wrap-guide {
+      background-color: #2C220C;
+    }
   }
 
   .gutter {
     color: #584421;
     padding: .5em 0;
 
-
     .line-number {
       padding-left: 0.75em;
     }
 
-    .line-number.git-line-added {
+    .line-number.git-line-added, .line-number.git-line-modified {
       padding-left: calc(0.75em - 2px);
     }
 
@@ -45,11 +48,10 @@
       background-color: #35220E;
     }
   }
-}
 
-// FIXME: these should go in syntax themes?
-.editor .gutter.drop-shadow {
-  -webkit-box-shadow: -2px 0 10px 2px #222;
+  .gutter.drop-shadow {
+    -webkit-box-shadow: -2px 0 10px 2px #222;
+  }
 }
 
 @-webkit-keyframes highlight {
