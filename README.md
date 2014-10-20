@@ -4,7 +4,7 @@ A retro theme for [Atom](https://atom.io) that matches the [unicorn syntax](http
 
 This theme can then be activated by going to the _Themes_ section in the Settings view (`cmd-,`) and selecting it from the _UI Themes_ drop-down menu.
 
-![Screenshot](https://github.com/unicorn/atom-unicorn-ui/blob/master/screenshot.png)
+[ ![Screenshot](https://github.com/unicorn/atom-unicorn-ui/raw/master/screenshot.png)](https://github.com/unicorn/atom-unicorn-ui/tree/master/screenshot.png)
 
 You can also use the custom application icons provided by Jesse here:
 
