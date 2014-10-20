@@ -1,11 +1,7 @@
-# Seti UI
+# Atom Unicorn theme
 
-A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://atom.io/themes/seti-syntax) also available.
+Unicorn UI theme for Atom that matches the [unicorn syntax](https://atom.io/packages/unicorn-syntax)
 
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)
+This theme can then be activated by going to the _Themes_ section in the Settings view (`cmd-,`) and selecting it from the _UI Themes_ drop-down menu.
 
-
-### Custom App Icons
-[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/circular/circular-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/circular)
-[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/rounded/rounded-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/rounded/)
-[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/squared/squared-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/squared/)
+![Screenshot](http://i.imgur.com/EX5t2XM.png)
