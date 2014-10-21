@@ -3,13 +3,6 @@
 @import "ui-mixins";
 
 
-
-// - - - - - - - - - - - - - - -
-// ICONS BASED ON FILE EXTENSION
-// - - - - - - - - - - - - - - -
-
-
-
 // PROJECT / REPO ICON
 .name.icon.icon-repo {
 
@@ -91,18 +84,18 @@
 // DEFAULT TAB ICON
 .tab-bar .tab .title {
   display: inline-block;
-  padding: 0;
+  padding: 5px 0 0 0;
   position: relative;
   width: 100%;
 
   &:before {
-    font-family: icomoon;
-    content: @icon-default;
-    font-size: 15px;
-    position: relative;
-    top: 2px;
-    left: -4px;
     color: @color-default;
+    content: @icon-default;
+    font-family: icomoon;
+    font-size: 15px;
+    left: -4px;
+    margin-top: -3px;
+    position: relative;
   }
 }
 
@@ -135,21 +128,24 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 
 
 .tab-bar .tab .title.icon-tools {
-  display: inline-block;
-  width: 100%;
-
   &:before {
+    color: @color-settings;
     content: @icon-settings;
     font-size: 18px;
-    left: 0px;
-    top: 4px;
-    color: @color-settings;
+    margin: -1px 5px 0 1px;
+  }
+}
+
+.tab-bar .tab .title.icon-search {
+  &:before {
+    font-size: 15px;
+    margin: 0;
   }
 }
 
 
 // CSS
-.icon-tab('.css', css, 20px, 6px, -1px, -5px, -5px);
+.icon-tab('.css', css, 20px, -7px, -2px, 0px);
 .icon-tree('.css', css, 20px, 5px, 1px, -6px, -3px);
 
 // CSON
@@ -157,7 +153,7 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 .icon-tree('.cson', 'json', 20px, 5px, 2px, -5px, -4px);
 
 // Handlebars
-.icon-tab('.hbs', 'handlebars', 22px, 6px, 0px, -5px );
+.icon-tab('.hbs', 'handlebars', 22px, -8px, 1px, 1px);
 .icon-tree('.hbs', 'handlebars', 20px, 5px, 2px, -5px, -3px);
 
 // Hidden files
@@ -175,39 +171,43 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 
 
 // HTML
-.icon-tab('.html', html, 22px, 6px);
-.icon-tree('.html', html, 22px, 5px, 2px, -6px,-5px);
+.icon-tab('.html', 'html', 22px, -8px, -2px, -1px);
+.icon-tree('.html', 'html', 22px, 5px, 2px, -6px, -5px);
+
+// Haml
+.icon-tab('.haml', 'haml', 22px, -8px, -2px, -1px);
+.icon-tree('.haml', 'haml', 22px, 5px, 2px, -6px, -5px);
 
 // Jade
-.icon-tab('.jade', 'jade', 20px, 5px, -3px, -5px, -5px);
-.icon-tree('.jade', 'jade', 20px, 5px, 2px, -5px, -3px);
+.icon-tab('.jade', 'jade', 22px, -8px, -2px, -1px);
+.icon-tree('.jade', 'jade', 22px, 5px, 2px, -6px, -5px);
 
 // JavaScript
-.icon-tab('.js', 'js', 20px, 6px, -3px, -5px, -5px);
+.icon-tab('.js', 'js', 20px, -6px, -2px, 0px);
 .icon-tree('.js', 'js', 20px, 6px, 2px, -6px, -4px);
 
 // Coffescript
-.icon-tab('.coffee', 'coffee', 16px, 5px, 4px, 2px, -3px);
+.icon-tab('.coffee', 'coffee', 16px, -1px, 0px, 4px);
 .icon-tree('.coffee', 'coffee', 15px, 4px, 2px, -1px, -1px);
 
 // JSON
-.icon-tab('.json', 'json', 20px, 5px, -3px, -5px, -5px);
+.icon-tab('.json', 'json', 20px, -7px, -1px, 0px);
 .icon-tree('.json', 'json', 20px, 5px, 2px, -5px, -3px);
 
 // LESS
-.icon-tab('.less', less, 20px, 5px, -3px, -5px, -5px);
+.icon-tab('.less', less, 20px, -7px, -2px, 0px);
 .icon-tree('.less', less, 20px, 5px, 2px, -5px, -3px);
 
 // LICENSE
-.icon-tab('LICENSE', 'license', 15px, 3px, 2px, 0px, -2px);
+.icon-tab('LICENSE', 'license', 15px, -3px, 0px, 0px);
 .icon-tree('LICENSE', 'license', 16px, 3px, 2px, -3px, -1px);
-.icon-tab('License', 'license', 15px, 3px, 2px, 0px, -4px);
+.icon-tab('License', 'license', 15px, -3px, 0px, 0px);
 .icon-tree('License', 'license', 16px, 3px, 2px, -3px, -2px);
-.icon-tab('license', 'license', 15px, 3px, 2px, 0px, -4px);
+.icon-tab('license', 'license', 15px, -3px, 0px, 0px);
 .icon-tree('license', 'license', 16px, 3px, 2px, -3px, -2px);
 
 // Markdown
-.icon-tab('.md', 'md', 20px, 5px, -3px, -5px, -5px);
+.icon-tab('.md', 'md', 20px, -7px, -2px, -1px);
 .icon-tree('.md', 'md', 20px, 5px, 2px, -5px, -2px);
 
 // Override for Markdown package
@@ -216,7 +216,7 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 }
 
 // Mustache
-.icon-tab('.mustache', 'mustache', 22px, 6px, 0px, -5px );
+.icon-tab('.mustache', 'mustache', 22px, -8px, 1px, 1px);
 .icon-tree('.mustache', 'mustache', 20px, 5px, 2px, -5px, -3px);
 
 // NPM
@@ -226,30 +226,30 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 .icon-tree('.npmignore', 'npm', 20px, 6px, 2px, -5px, -4px);
 
 // PHP
-.icon-tab('.php', 'php', 24px, 6px, -3px, -5px, -6px);
+.icon-tab('.php', 'php', 24px, -9px, -2px, 0px);
 .icon-tree('.php', 'php', 24px, 6px, 3px, -7px, -5px);
 
 // Procfile
-.icon-tab('procfile', 'procfile', 14px, 2px, 3px, 0px, 0px);
+.icon-tab('procfile', 'procfile', 14px, -2px, 0px, 1px);
 .icon-tree('procfile', 'procfile', 14px, 2px, 3px, -1px, -1px);
-.icon-tab('Procfile', 'procfile', 14px, 2px, 3px, 0px, 0px);
+.icon-tab('Procfile', 'procfile', 14px, -2px, 0px, 1px);
 .icon-tree('Procfile', 'procfile', 14px, 2px, 3px, -1px, -1px);
-.icon-tab('PROCFILE', 'procfile', 14px, 2px, 3px, 0px, 0px);
+.icon-tab('PROCFILE', 'procfile', 14px, -2px, 0px, 1px);
 .icon-tree('PROCFILE', 'procfile', 14px, 2px, 3px, -1px, -1px);
 
 
 // Python
-.icon-tab('.py', 'py', 20px, 5px, -3px, -5px, -5px);
+.icon-tab('.py', 'py', 20px, -7px, -1px, 0px);
 .icon-tree('.py', 'py', 20px, 5px, 3px, -4px, -3px);
 
 // Ruby
-.icon-tab('.rb', 'rb', 15px, 3px, 0px, -2px, -2px);
+.icon-tab('.rb', 'rb', 15px, -3px, 0px, 2px);
 .icon-tree('.rb', 'rb', 15px, 3px, 4px, -1px, -1px);
 
 // Sass
-.icon-tab('.sass', 'sass', 20px, 4px, -3px, -5px, -5px);
+.icon-tab('.sass', 'sass', 20px, -7px, -1px, 0px);
 .icon-tree('.sass', 'sass', 20px, 5px, 4px, -3px, -3px);
-.icon-tab('.scss', 'sass', 20px, 4px, -3px, -5px, -5px);
+.icon-tab('.scss', 'sass', 20px, -7px, -1px, 0px);
 .icon-tree('.scss', 'sass', 20px, 5px, 4px, -3px, -3px);
 
 // Settings
@@ -257,17 +257,17 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 .icon-tree('.svgx', 'img', 15px, 3px, 2px, -3px, -2px);
 
 // Stylus
-.icon-tab('.styl', 'styl', 20px, 5px, -2px, -5px, -5px);
+.icon-tab('.styl', 'styl', 20px, -7px, -1px, 1px);
 .icon-tree('.styl', 'styl', 20px, 4px, 3px, -4px, -3px);
 
 // XML
-.icon-tab('.xml', 'xml', 15px, 2px, 3px, 0px, -2px);
+.icon-tab('.xml', 'xml', 17px, -4px, 0px, 0px);
 .icon-tree('.xml', 'xml', 15px, 2px, 2px, -2px, -1px);
 
 
 
 // IMAGES
-.icon-tab('.ai', 'img', 15px, 3px, 4px, 0px, -2px);
+.icon-tab('.ai', 'img', 15px, -2px, 3px, 2px);
 .icon-tree('.ai', 'img', 15px, 3px, 2px, -3px, -2px);
 
 .icon-tab('.bpm', 'img', 15px, 3px, 4px, 0px, -2px);
@@ -300,51 +300,51 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 // THESE NEED TO COME LAST SO THE DON'T GET OVERRIDEN!
 
 // Bower
-.icon-tab('bower.json', 'bower', 20px, 5px, 2px, -4px, -5px);
+.icon-tab('bower.json', 'bower', 20px, -6px, 0px, 0px);
 .icon-tree('bower.json', 'bower', 20px, 5px, 2px, -4px, -3px);
-.icon-tab('Bower.json', 'bower', 20px, 5px, 2px, -4px, -5px);
+.icon-tab('Bower.json', 'bower', 20px, -6px, 0px, 0px);
 .icon-tree('Bower.json', 'bower', 20px, 5px, 2px, -4px, -3px);
-.icon-tab('BOWER.json', 'bower', 20px, 5px, 2px, -4px, -5px);
+.icon-tab('BOWER.json', 'bower', 20px, -6px, 0px, 0px);
 .icon-tree('BOWER.json', 'bower', 20px, 5px, 2px, -4px, -3px);
-.icon-tab('.bowerrc', 'bower', 20px, 5px, 2px, -4px, -5px);
+.icon-tab('.bowerrc', 'bower', 20px, -6px, 0px, 0px);
 .icon-tree('.bowerrc', 'bower', 20px, 5px, 2px, -4px, -3px);
 
 
 // Grunt
-.icon-tab('gruntfile.js', 'grunt', 15px, 3px, 3px, 0px, -2px);
+.icon-tab('gruntfile.js', 'grunt', 15px, -3px, 1px, 1px);
 .icon-tree('gruntfile.js', 'grunt', 18px, 4px, 2px, -5px, -2px);
-.icon-tab('Gruntfile.js', 'grunt', 15px, 3px, 3px, 0px, -2px);
+.icon-tab('Gruntfile.js', 'grunt', 15px, -3px, 1px, 1px);
 .icon-tree('Gruntfile.js', 'grunt', 18px, 4px, 2px, -5px, -2px);
-.icon-tab('GruntFile.js', 'grunt', 15px, 3px, 3px, 0px, -2px);
+.icon-tab('GruntFile.js', 'grunt', 15px, -3px, 1px, 1px);
 .icon-tree('GruntFile.js', 'grunt', 18px, 4px, 2px, -5px, -2px);
-.icon-tab('GRUNTFILE.js', 'grunt', 15px, 3px, 3px, 0px, -2px);
+.icon-tab('GRUNTFILE.js', 'grunt', 15px, -3px, 1px, 1px);
 .icon-tree('GRUNTFILE.js', 'grunt', 18px, 4px, 2px, -5px, -2px);
-.icon-tab('gruntfile.coffee', 'grunt', 15px, 3px, 3px, 0px, -2px);
+.icon-tab('gruntfile.coffee', 'grunt', 15px, -3px, 1px, 1px);
 .icon-tree('gruntfile.coffee', 'grunt', 18px, 4px, 2px, -5px, -2px);
-.icon-tab('Gruntfile.coffee', 'grunt', 15px, 3px, 3px, 0px, -2px);
+.icon-tab('Gruntfile.coffee', 'grunt', 15px, -3px, 1px, 1px);
 .icon-tree('Gruntfile.coffee', 'grunt', 18px, 4px, 2px, -5px, -2px);
-.icon-tab('GruntFile.coffee', 'grunt', 15px, 3px, 3px, 0px, -2px);
+.icon-tab('GruntFile.coffee', 'grunt', 15px, -3px, 1px, 1px);
 .icon-tree('GruntFile.coffee', 'grunt', 18px, 4px, 2px, -5px, -2px);
-.icon-tab('GRUNTFILE.coffee', 'grunt', 15px, 3px, 3px, 0px, -2px);
+.icon-tab('GRUNTFILE.coffee', 'grunt', 15px, -3px, 1px, 1px);
 .icon-tree('GRUNTFILE.coffee', 'grunt', 18px, 4px, 2px, -5px, -2px);
 
 
 // Gulp
-.icon-tab('gulpfile.js', 'gulp', 20px, 6px, -3px, -5px, -3px);
+.icon-tab('gulpfile.js', 'gulp', 20px, -4px, 1px, -1px);
 .icon-tree('gulpfile.js', 'gulp', 20px, 6px, 2px, -5px, -3px);
-.icon-tab('Gulpfile.js', 'gulp', 17px, 3px, -3px, -5px, -3px);
+.icon-tab('Gulpfile.js', 'gulp', 17px, -4px, 1px, -1px);
 .icon-tree('Gulpfile.js', 'gulp', 20px, 4px, 2px, -5px, -3px);
-.icon-tab('GulpFile.js', 'gulp', 20px, 6px, -3px, -5px, -3px);
+.icon-tab('GulpFile.js', 'gulp', 20px, -4px, 1px, -1px);
 .icon-tree('GulpFile.js', 'gulp', 20px, 6px, 2px, -5px, -3px);
-.icon-tab('GULPFILE.js', 'gulp', 20px, 6px, -3px, -5px, -3px);
+.icon-tab('GULPFILE.js', 'gulp', 20px, -4px, 1px, -1px);
 .icon-tree('GULPFILE.js', 'gulp', 20px, 6px, 2px, -5px, -3px);
-.icon-tab('gulpfile.coffee', 'gulp', 20px, 6px, -3px, -5px, -3px);
+.icon-tab('gulpfile.coffee', 'gulp', 20px, -4px, 1px, -1px);
 .icon-tree('gulpfile.coffee', 'gulp', 20px, 6px, 2px, -5px, -3px);
 .icon-tab('Gulpfile.coffee', 'gulp', 17px, 3px, -3px, -5px, -3px);
 .icon-tree('Gulpfile.coffee', 'gulp', 20px, 4px, 2px, -5px, -3px);
-.icon-tab('GulpFile.coffee', 'gulp', 20px, 6px, -3px, -5px, -3px);
+.icon-tab('GulpFile.coffee', 'gulp', 20px, -4px, 1px, -1px);
 .icon-tree('GulpFile.coffee', 'gulp', 20px, 6px, 2px, -5px, -3px);
-.icon-tab('GULPFILE.coffee', 'gulp', 20px, 6px, -3px, -5px, -3px);
+.icon-tab('GULPFILE.coffee', 'gulp', 20px, -4px, 1px, -1px);
 .icon-tree('GULPFILE.coffee', 'gulp', 20px, 6px, 2px, -5px, -3px);
 
 

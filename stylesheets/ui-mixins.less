@@ -4,18 +4,18 @@
 .icon-tab( @extension: ''; @type: ''; @font: 20px; @top: 6px; @right: -3px; @left: -5px; @offset: -6px) {
 
   .tab-bar .tab .title[data-name$="@{extension}"] {
-    display: inline-block;
-    top: @offset;
-    padding: 0;
+    // display: inline-block;
+    // top: @offset;
+    // padding: 0;
 
     &:before {
-      font-family: icomoon;
-      content: "@{icon-@{type}}";
-      font-size: @font;
-      top: @top;
-      left: @left;
-      margin-right: @right;
       color: ~"@{color-@{type}}";
+      content: "@{icon-@{type}}";
+      font-family: icomoon;
+      font-size: @font;
+      margin-left: @left;
+      margin-right: @right;
+      margin-top: @top;
     }
   }
 
