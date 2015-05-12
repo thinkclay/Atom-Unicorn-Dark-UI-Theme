@@ -16,6 +16,10 @@ atom-pane.pane atom-text-editor.editor.editor-colors {
   background-color: #2C220C;
 }
 
+.editor .gutter .line-number.cursor-line {
+  background-color: #3a2a13;
+}
+
 .editor .gutter .line-number.git-line-ignored {
   border-color: @color-status-ignored;
   opacity: 1;
@@ -70,12 +74,14 @@ atom-pane.pane atom-text-editor.editor.editor-colors {
   padding-left: @component-padding/2;
 
   .cursor { border-color: @input-text-color; }
+
   .selection .region { background-color: darken(@input-background-color, 10%); }
 }
 
 .editor.editor-colors.mini.is-focused {
   background-color: @input-background-color;
   color: @input-text-color-selected;
+
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
 }
 
