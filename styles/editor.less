@@ -2,7 +2,7 @@
 @import "icon-variables";
 @import "ui-mixins";
 
-atom-pane.pane atom-text-editor.editor.editor-colors {
+atom-pane atom-text-editor.editor-colors {
   .gutter {
     padding: 6px 0;
   }
@@ -12,62 +12,76 @@ atom-pane.pane atom-text-editor.editor.editor-colors {
   }
 }
 
-.editor .wrap-guide {
-  background-color: #2C220C;
-}
+atom-text-editor {
+  .wrap-guide {
+    background-color: #2C220C;
+  }
 
-.editor .gutter .line-number.cursor-line {
-  background-color: #3a2a13;
-}
+  .gutter {
+    .line-number {
+      &.cursor-line {
+        background-color: #3a2a13;
+      }
 
-.editor .gutter .line-number.git-line-ignored {
-  border-color: @color-status-ignored;
-  opacity: 1;
-}
+      &.git-line-ignored {
+        border-color: @color-status-ignored;
+        opacity: 1;
+      }
 
-.editor .gutter .line-number.git-line-added {
-  border-color: @color-status-added;
-  opacity: 1;
-}
+      &.git-line-added {
+        border-color: @color-status-added;
+        opacity: 1;
+      }
 
-.editor .gutter .line-number.git-line-renamed {
-  border-color: @color-status-renamed;
-  opacity: 1;
-}
+      &.git-line-renamed {
+        border-color: @color-status-renamed;
+        opacity: 1;
+      }
 
-.editor .gutter .line-number.git-line-modified {
-  border-color: @color-status-modified;
-  opacity: 1;
-}
+      &.git-line-modified {
+        border-color: @color-status-modified;
+        opacity: 1;
+      }
 
-.editor .gutter .line-number.git-line-removed {
-  border-color: @color-status-removed;
-  opacity: 1;
+      &.git-line-removed {
+        border-color: @color-status-removed;
+        opacity: 1;
 
-  &:before {
-    bottom: inherit !important;
-    content: " ";
-    display: inline-block;
-    height: auto;
-    margin: 0 !important;
-    position: relative;
-    width: 1em !important;
+        &:before {
+          bottom: inherit !important;
+          content: " ";
+          display: inline-block;
+          height: auto;
+          margin: 0 !important;
+          position: relative;
+          width: 1em !important;
+        }
+      }
+
+      &:before {
+        bottom: inherit !important;
+        content: " ";
+        display: inline-block;
+        height: auto;
+        margin: 0 !important;
+        position: relative;
+        width: 1em !important;
+      }
+    }
+  }
+
+  .gutter.drop-shadow {
+    -webkit-box-shadow: -2px 0 10px 2px #222;
+  }
+
+  .highlighted.selection .region {
+    -webkit-animation-name: highlight;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
   }
 }
 
-.editor .gutter .line-number {
-  &:before {
-    bottom: inherit !important;
-    content: " ";
-    display: inline-block;
-    height: auto;
-    margin: 0 !important;
-    position: relative;
-    width: 1em !important;
-  }
-}
-
-.editor.mini {
+atom-text-editor[mini] {
   border: 1px solid @input-border-color;
   box-shadow: none;
   border-radius: @component-border-radius;
@@ -78,16 +92,11 @@ atom-pane.pane atom-text-editor.editor.editor-colors {
   .selection .region { background-color: darken(@input-background-color, 10%); }
 }
 
-.editor.editor-colors.mini.is-focused {
+.editor-colors.mini.is-focused {
   background-color: @input-background-color;
   color: @input-text-color-selected;
 
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
-}
-
-// FIXME: these should go in syntax themes?
-.editor .gutter.drop-shadow {
-  -webkit-box-shadow: -2px 0 10px 2px #222;
 }
 
 @-webkit-keyframes highlight {
@@ -95,18 +104,13 @@ atom-pane.pane atom-text-editor.editor.editor-colors {
   to { background-color: null; }
 }
 
-.editor .highlighted.selection .region {
-  -webkit-animation-name: highlight;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
-}
 
 .select-list.command-palette.overlay.from-top {
   .error-message {
     padding: 3px 0px 0px 6px;
   }
 
-  .editor.editor-colors.mini.is-focused {
+  .editor-colors.mini.is-focused {
     padding: 1px;
   }
 }
