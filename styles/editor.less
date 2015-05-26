@@ -2,7 +2,7 @@
 @import "icon-variables";
 @import "ui-mixins";
 
-atom-pane atom-text-editor.editor-colors {
+atom-pane atom-text-editor {
   .gutter {
     padding: 6px 0;
   }
@@ -92,7 +92,7 @@ atom-text-editor[mini] {
   .selection .region { background-color: darken(@input-background-color, 10%); }
 }
 
-.editor-colors.mini.is-focused {
+atom-text-editor[mini].is-focused {
   background-color: @input-background-color;
   color: @input-text-color-selected;
 
@@ -110,7 +110,7 @@ atom-text-editor[mini] {
     padding: 3px 0px 0px 6px;
   }
 
-  .editor-colors.mini.is-focused {
+  atom-text-editor[mini].is-focused {
     padding: 1px;
   }
 }
