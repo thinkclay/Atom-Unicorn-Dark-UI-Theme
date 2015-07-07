@@ -8,62 +8,72 @@
 @component-border-radius: 2px;
 
 
+@eggshell: #F4F0E8;
+@coffee: #7C705F;
+@orange: #ba6f32;
+@brand1: #3D728E;
+@brand2: #54835F;
+@brand3: #3D8C8E;
+@brand4: #B36E50;
+@brand5: #C0A962;
+@brand6: #99896F;
+@brand7: #B35050;
+
 // Base Colors
-@blue: #3ea1e4;
-@green: #17ca65;
-@yellow: #f5e11d;
-@red: #c63f3f;
-@purple: #db2ff4;
-@background: #2a1a03;
-@text: #aaa;
+@blue: @brand1;
+@green: @brand2;
+@yellow: @brand5;
+@red: @brand7;
+@background: @eggshell;
+@text: @coffee;
 
 @ui-site-color-1: @green;
 @ui-site-color-2: @blue;
-@ui-site-color-3: #ff982d;
-@ui-site-color-4: @purple;
+@ui-site-color-3: @orange;
+@ui-site-color-4: @brand3;
 @ui-site-color-5: @yellow;
 
 @text-color-info: @blue;
 @text-color-success: @green;
 @text-color-warning: @yellow;
-@text-color-error: #cb3434;
+@text-color-error: @red;
 
-@background-color-info: #5293d8;
-@background-color-success: #26c26a;
-@background-color-warning: #ffaa2c;
+@background-color-info: @blue;
+@background-color-success: @green;
+@background-color-warning: @yellow;
 @background-color-error: @red;
 @background-color-highlight: rgba(255, 255, 255, 0.07);
-@background-color-selected: #06675b;
+@background-color-selected: darken(@eggshell, 5%);
 
 @app-background-color: @background;
 
 
 // FONT COLORS
-@text-color: #87673a;
-@text-color-subtle: #6d4c1f;
-@text-color-highlight: #f3e0c4;
+@text-color: @coffee;
+@text-color-subtle: @coffee;
+@text-color-highlight: @coffee;
 @text-color-selected: @text-color-highlight;
 @text-color-ignored: @text-color-subtle;
-@text-color-added: @text-color-success;
-@text-color-renamed: @text-color-info;
-@text-color-modified: @text-color-warning;
-@text-color-removed: @text-color-error;
+@text-color-added: @green;
+@text-color-renamed: @blue;
+@text-color-modified: @yellow;
+@text-color-removed: @red;
 
 
 // BUTTONS
-@button-background-color: #5d4522;
-@button-text-color: #fff;
+@button-background-color: @coffee;
+@button-text-color: @eggshell;
 @button-background-color-hover: lighten(@button-background-color, 5%);
-@button-background-color-selected: darken(#5d4522, 5%);
+@button-background-color-selected: darken(@coffee, 10%);
 @button-border-color: @base-border-color;
 
 
 // TREE VIEW / SIDEBAR
 @tree-view-background-color: @tool-panel-background-color;
-@tree-view-border-color: @tool-panel-border-color;
+@tree-view-border-color: @eggshell;
 
-@scrollbar-background-color: rgba(42, 42, 42, 0.5);
-@scrollbar-color: rgba(92, 92, 92, 0.5);
+@scrollbar-background-color: @coffee;
+@scrollbar-color: @coffee;
 
 
 
@@ -84,13 +94,13 @@
 @panel-border: #000;
 
 // TABS
-@tab-height: 25px;
+@tab-height: 30px;
 @tab-border: none;
 @tab-top-padding: 0px;
 @tab-bottom-border-height: 0px;
 @tab-highlight-color: @blue;
 @tab-background: #2a1a03;
-@tab-background-color: #2a1a03;
+@tab-background-color: lighten(@coffee, 30%);
 @tab-background-active: @background;
 @tab-background-color-active: #2a1a03;
 @tab-border-color: lighten(@tab-background-color, 10%);
@@ -114,13 +124,13 @@
 @input-text-color-selected: rgba(255,255,255,0.7);
 @input-border-color: @base-border-color;
 
-@tool-panel-background-color: #322107;
+@tool-panel-background-color: @eggshell;
 @tool-panel-border-color: @base-border-color;
 
-@inset-panel-background-color: #2a1a03;
+@inset-panel-background-color: @eggshell;
 @inset-panel-border-color: @base-border-color;
 
-@panel-heading-background-color: #3b2b14;
+@panel-heading-background-color: @eggshell;
 @panel-heading-border-color: fadein(@base-border-color, 10%);
 
 @overlay-background-color: #2a1a03;
